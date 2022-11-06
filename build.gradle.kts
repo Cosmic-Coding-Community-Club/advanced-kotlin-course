@@ -14,6 +14,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    testImplementation("org.assertj:assertj-core:3.23.1")
+    testImplementation("org.jetbrains.kotlin:kotlin-reflect:1.7.20")
 }
 
 tasks.test {
@@ -21,7 +23,7 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "17"
 }
 
 application {

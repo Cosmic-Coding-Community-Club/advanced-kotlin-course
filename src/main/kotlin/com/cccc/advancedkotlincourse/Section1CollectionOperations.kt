@@ -4,63 +4,45 @@ object Section1CollectionOperations {
     
     private val users = getUserList()
     
-    // NOTE: In these exercises using always operators of collections
+    // NOTE: In these exercises just must use operators of collections
     // e.g.: .map   .filter   .foreach   .last    .first   ...
     
     
     // Returns a list of the pretty info text of each user with next style:
     // "id[1001] - John T. Brown 21yo (171.4) - 455, avenue High, Gallington - car[yes]"
-    fun task1() = users.map {
-        "id[${it.id}] - ${it.name} ${it.surname} ${it.age}yo (${it.height}) " +
-            "- ${it.address} - car[${if (it.hasVehicle) "yes" else "no"}]"
-    }.toList()
+    fun task1() = listOf<Any>()
     
     // Returns a list of users that have more than 30 years old
-    fun task2() = users
-        .filter { it.age > 30 }
-        .toList()
+    fun task2() = listOf<Any>()
     
     // Returns a list of height of users
-    fun task3() = users
-        .map { it.height }
-        .toList()
+    fun task3() = listOf<Any>()
     
     // Returns a map with name as key and age as value
-    fun task4() = users
-        .associateBy({ it.name }, { it.age })
+    fun task4() = mapOf<Any,Any>()
     
     // Returns a map with "name surname" as key and age as value
-    fun task5() = users
-        .associateBy({ "${it.name} ${it.surname}" }, { it.age })
+    fun task5() = mapOf<Any,Any>()
     
     // Returns the height sum rounded to integer of all user that have a car
-    fun task6() = users
-        .filter { it.hasVehicle }
-        .sumOf { it.height.toDouble() }
-        .toInt()
+    fun task6() = listOf<Any>()
     
     //Return the name length average rounded to integer of all users
-    fun task7() = users
-        .map { it.name.length }
-        .average().toInt()
+    fun task7() = listOf<Any>()
     
     //Return map with address as key and entire user as value
-    fun task8() = users
-        .associateBy { it.address }
+    fun task8() = listOf<Any>()
     
     // Return two list of users: first list with the users that have car
     // and second list with users that not have car
-    fun task9() = users
-        .partition { it.hasVehicle }
+    fun task9() = listOf<Any>()
     
     // Return a map with The user Counters of users have car and the users that not have car
     // and second list with users that not have car
-    fun task10() = users
-        .groupingBy { it.hasVehicle }.eachCount()
+    fun task10() = mapOf<Any,Any>()
     
     // Return the sum of age plus height of all users
-    fun task11() = users
-        .fold(0) { _, user -> (user.age + user.height).toInt() }
+    fun task11() = Any()
     
     
     data class User(

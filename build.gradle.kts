@@ -25,7 +25,3 @@ tasks.test {
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "17"
 }
-
-application {
-    mainClass.set("MainKt")
-}

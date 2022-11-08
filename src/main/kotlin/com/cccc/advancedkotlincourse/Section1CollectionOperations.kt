@@ -5,62 +5,95 @@ object Section1CollectionOperations {
     private val users = getUserList()
     
     // NOTE: In these exercises using always operators of collections
+    // Also use only "users" to do these exercises
     // e.g.: .map   .filter   .foreach   .last    .first   ...
     
     
+    // Return first user of list
+    fun task1() = users
+        .first()
+    
+    // Return first user of list that contains the Smith surname
+    fun task2() = users
+        .first { it.surname.contains("Smith") }
+    
+    // Return last user of list
+    fun task3() = users
+        .last()
+    
+    // Return three first users of list
+    fun task4() = users
+        .take(3)
+    
+    // Return 3 lists with users grouping in pairs in order of original list
+    fun task5() = users
+        .chunked(2)
+    
+    // Returns a list of users that have more than 30 years old
+    fun task6() = users
+        .filter { it.age > 30 }
+        .toList()
+    
     // Returns a list of the pretty info text of each user with next style:
     // "id[1001] - John T. Brown 21yo (171.4) - 455, avenue High, Gallington - car[yes]"
-    fun task1() = users.map {
+    fun task7() = users.map {
         "id[${it.id}] - ${it.name} ${it.surname} ${it.age}yo (${it.height}) " +
             "- ${it.address} - car[${if (it.hasVehicle) "yes" else "no"}]"
     }.toList()
     
-    // Returns a list of users that have more than 30 years old
-    fun task2() = users
-        .filter { it.age > 30 }
-        .toList()
-    
     // Returns a list of height of users
-    fun task3() = users
+    fun task8() = users
         .map { it.height }
         .toList()
     
     // Returns a map with name as key and age as value
-    fun task4() = users
+    fun task9() = users
         .associateBy({ it.name }, { it.age })
     
     // Returns a map with "name surname" as key and age as value
-    fun task5() = users
+    fun task10() = users
         .associateBy({ "${it.name} ${it.surname}" }, { it.age })
     
     // Returns the height sum rounded to integer of all user that have a car
-    fun task6() = users
+    fun task11() = users
         .filter { it.hasVehicle }
         .sumOf { it.height.toDouble() }
         .toInt()
     
     //Return the name length average rounded to integer of all users
-    fun task7() = users
+    fun task12() = users
         .map { it.name.length }
         .average().toInt()
     
+    //Return the max age of users list
+    fun task13() = users
+        .maxOf { it.age }
+    
     //Return map with address as key and entire user as value
-    fun task8() = users
+    fun task14() = users
         .associateBy { it.address }
     
     // Return two list of users: first list with the users that have car
     // and second list with users that not have car
-    fun task9() = users
+    fun task15() = users
         .partition { it.hasVehicle }
     
     // Return a map with The user Counters of users have car and the users that not have car
     // and second list with users that not have car
-    fun task10() = users
+    fun task16() = users
         .groupingBy { it.hasVehicle }.eachCount()
     
     // Return the sum of age plus height of all users
-    fun task11() = users
+    fun task17() = users
         .fold(0) { _, user -> (user.age + user.height).toInt() }
+    
+    //return all users list ordered by age ascending
+    fun task18() = users
+        .sortedBy { it.age }
+    
+    //return all users list ordered by height descending
+    fun task19() = users
+        .sortedByDescending { it.height }
     
     
     data class User(
@@ -72,7 +105,6 @@ object Section1CollectionOperations {
         val height: Float,
         val hasVehicle: Boolean
     )
-    
     
     fun getUserList(): List<User> {
         return listOf(

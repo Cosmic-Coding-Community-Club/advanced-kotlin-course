@@ -47,8 +47,7 @@
 Course designed for students who have already passed the essential course and want to learn the advanced concepts and advanced syntax in the Kotlin language.
 #### Program - What you will learn in this course?
 
-* Lambdas
-* Lambda Operations
+* Collection Operations
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -58,7 +57,7 @@ Course designed for students who have already passed the essential course and wa
 
 ## Getting Started
 
-This course is a series of exercises to get you familiar with the Kotlin Syntax and your basic concepts.
+This course is a series of exercises to expand your intermediate and advanced knowledge of Kotlin syntax and concepts.
 Each exercise is created as a failing unit test (red) and your job is to make it pass (green).
 
 #### How to build and run tests

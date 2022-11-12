@@ -48,6 +48,7 @@ Course designed for students who have already passed the essential course and wa
 #### Program - What you will learn in this course?
 
 * Collection Operations
+* Collection Predicates
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

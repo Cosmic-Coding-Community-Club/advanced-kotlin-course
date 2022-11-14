@@ -22,7 +22,7 @@ object Section3Constructors {
         return Tree("Palm", 19)
     }
     
-    // Create class named "Car" with two constructors
+    // Create inside "creations" packages a new class named "Car" with two constructors:
     // First constructor with immutable property parameter named "color" type of String
     // Secondary constructor with parameter named "price" type of float
     // Return one instance of this class using secondary constructor in this function

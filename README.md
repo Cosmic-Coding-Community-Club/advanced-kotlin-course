@@ -49,6 +49,7 @@ Course designed for students who have already passed the essential course and wa
 
 * Collection Operations
 * Collection Predicates
+* Constructors
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
